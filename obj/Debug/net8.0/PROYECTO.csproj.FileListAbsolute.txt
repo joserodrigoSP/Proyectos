@@ -1,0 +1,15 @@
+C:\Users\jrodr\OneDrive\Escritorio\pc\PROYECTO\bin\Debug\net8.0\PROYECTO.exe
+C:\Users\jrodr\OneDrive\Escritorio\pc\PROYECTO\bin\Debug\net8.0\PROYECTO.deps.json
+C:\Users\jrodr\OneDrive\Escritorio\pc\PROYECTO\bin\Debug\net8.0\PROYECTO.runtimeconfig.json
+C:\Users\jrodr\OneDrive\Escritorio\pc\PROYECTO\bin\Debug\net8.0\PROYECTO.dll
+C:\Users\jrodr\OneDrive\Escritorio\pc\PROYECTO\bin\Debug\net8.0\PROYECTO.pdb
+C:\Users\jrodr\OneDrive\Escritorio\pc\PROYECTO\obj\Debug\net8.0\PROYECTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jrodr\OneDrive\Escritorio\pc\PROYECTO\obj\Debug\net8.0\PROYECTO.AssemblyInfoInputs.cache
+C:\Users\jrodr\OneDrive\Escritorio\pc\PROYECTO\obj\Debug\net8.0\PROYECTO.AssemblyInfo.cs
+C:\Users\jrodr\OneDrive\Escritorio\pc\PROYECTO\obj\Debug\net8.0\PROYECTO.csproj.CoreCompileInputs.cache
+C:\Users\jrodr\OneDrive\Escritorio\pc\PROYECTO\obj\Debug\net8.0\PROYECTO.sourcelink.json
+C:\Users\jrodr\OneDrive\Escritorio\pc\PROYECTO\obj\Debug\net8.0\PROYECTO.dll
+C:\Users\jrodr\OneDrive\Escritorio\pc\PROYECTO\obj\Debug\net8.0\refint\PROYECTO.dll
+C:\Users\jrodr\OneDrive\Escritorio\pc\PROYECTO\obj\Debug\net8.0\PROYECTO.pdb
+C:\Users\jrodr\OneDrive\Escritorio\pc\PROYECTO\obj\Debug\net8.0\PROYECTO.genruntimeconfig.cache
+C:\Users\jrodr\OneDrive\Escritorio\pc\PROYECTO\obj\Debug\net8.0\ref\PROYECTO.dll

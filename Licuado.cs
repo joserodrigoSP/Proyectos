@@ -1,5 +1,4 @@
 using System.Runtime.CompilerServices;
-
 class Licuado{
 double precio; 
 int cdAzucar;
@@ -55,6 +54,7 @@ public string MostrarAgrandado(){
         precio = precio + (precio * 0.07);
         return "su pedido está agrandado";
     }else{
+        precio = precio + 0;
         return "El pedido no es agrandado";
     }
 
@@ -68,7 +68,7 @@ public string MostrarAzucar(){
 public int MostrarcantAzucar(){
     return cdAzucar;
 }
-public string MostrarDatos(){
-    return "Su pedido es: Licuado de fresas con " +MostrarLeche()+ "agregó "+MostrarcantAzucar()+" cdt de"+ MostrarAzucar()+MostrarAgrandado()+"El precio es de: "+precio;
+public double MostrarPrecio(){
+    return precio;
 }
 }

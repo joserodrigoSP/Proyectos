@@ -9,6 +9,7 @@ string ScAzucar;
 int tipoLeche;
 string StipoLeche;
 int agrandado;
+bool estAgrandado= false;
 double total;
 
 
@@ -34,10 +35,40 @@ switch(ScAzucar){
 }
 }
 
-public void definirLeche(){
-    
+public void definirLeche(string tipole){
+StipoLeche = tipole;
+switch(tipole){
+case "agua":
+precio = precio -3;
+break;
+case "leche de soya":
+precio = precio +2;
+break;
 }
+}
+public void Agrandar(){
+estAgrandado = !estAgrandado;
+}
+public string MostrarAgrandado(){
 
+    if(estAgrandado == true){
+        precio = precio + (precio * 0.07);
+        return "su pedido está agrandado";
+    }else{
+        return "El pedido no es agrandado";
+    }
 
-
+}
+public string MostrarLeche(){
+    return StipoLeche;
+}
+public string MostrarAzucar(){
+    return ScAzucar;
+}
+public int MostrarcantAzucar(){
+    return cdAzucar;
+}
+public string MostrarDatos(){
+    return "Su pedido es: Licuado de fresas con " +MostrarLeche()+ "agregó "+MostrarcantAzucar()+" cdt de"+ MostrarAzucar()+MostrarAgrandado()+"El precio es de: "+precio;
+}
 }

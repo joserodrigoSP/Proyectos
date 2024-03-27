@@ -52,10 +52,10 @@ public string MostrarAgrandado(){
 
     if(estAgrandado == true){
         precio = precio + (precio * 0.07);
-        return "su pedido está agrandado";
+        return " | Su pedido está agrandado";
     }else{
         precio = precio + 0;
-        return "El pedido no es agrandado";
+        return " | El pedido no es agrandado";
     }
 
 }

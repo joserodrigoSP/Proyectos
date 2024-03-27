@@ -1,7 +1,11 @@
-﻿class Program{
+﻿using System.Globalization;
+using System.Threading;
+class Program{
 static void Main(string[] args){
 Licuado objlicuado = new Licuado();
 Cliente objcliente = new Cliente();
+DateTime fecha1 = DateTime.Now;
+
 int opcion=0;
 int respdow=0;
 int resp;
@@ -9,6 +13,7 @@ double precio=0;
 string tipoazucar =""; 
 string tipoleche = "";
 int cdaz=0;
+Console.WriteLine("Hora de inicio: "+fecha1);
 do{
 Console.WriteLine(" \n \n Qué acción desea realizar \n 1) Elegir azucar \n 2) Elegir Leche \n 3) Agrandar el pedido \n 4) Agregar datos del cliente \n 5) Finalizar pedido ");
 int.TryParse(Console.ReadLine(), out opcion);
@@ -93,7 +98,8 @@ Console.WriteLine("\n \n Te gustaria confirmar el pedido? 1) si  2) no");
 int.TryParse(Console.ReadLine(), out respdow);
 if(respdow==1){
 precio = objlicuado.MostrarPrecio();
-Console.WriteLine(" \n \n Nombre del cliente: "+objcliente.MostrarNombre()+".\n NIT: "+ objcliente.MostrarNit()+"\n Pedido: Licuado de fresa con "+ objlicuado.MostrarLeche()+", agregó "+objlicuado.MostrarcantAzucar()+" cucharaditas de "+objlicuado.MostrarAzucar()+" "+objlicuado.MostrarAgrandado()+", el precio total es de Q."+precio);
+DateTime fecha2 = DateTime.Now;
+Console.WriteLine(" \n \n | Fecha de inicio: "+fecha1+" \n | Fecha de finalización del pedido: "+fecha2+"\n | Nombre del cliente: "+objcliente.MostrarNombre()+".\n | NIT: "+ objcliente.MostrarNit()+"\n | Pedido: Licuado de fresa con "+ objlicuado.MostrarLeche()+"\n | Agregó "+objlicuado.MostrarcantAzucar()+" cucharaditas de "+objlicuado.MostrarAzucar()+" \n"+objlicuado.MostrarAgrandado()+"\n | El precio total es de Q."+precio);
 }
 break;
 

@@ -4,7 +4,7 @@ double precio;
 int cdAzucar;
 
 string ScAzucar;
-
+int cantidadL;
 int tipoLeche;
 string StipoLeche;
 int agrandado;
@@ -33,7 +33,11 @@ switch(ScAzucar){
     break;
 }
 }
+public void definirCant(int cant){
 
+cantidadL = cant;
+
+}
 public void definirLeche(string tipole){
 StipoLeche = tipole;
 switch(tipole){
@@ -70,5 +74,8 @@ public int MostrarcantAzucar(){
 }
 public double MostrarPrecio(){
     return precio;
+}
+public int MostrarCant(){
+    return cantidadL;
 }
 }

@@ -5,7 +5,7 @@ static void Main(string[] args){
 Licuado objlicuado = new Licuado();
 Cliente objcliente = new Cliente();
 DateTime fecha1 = DateTime.Now;
-
+int cantidadLicuados =1;
 int opcion=0;
 int respdow=0;
 int resp;
@@ -15,7 +15,8 @@ string tipoleche = "";
 int cdaz=0;
 Console.WriteLine("Hora de inicio: "+fecha1);
 do{
-Console.WriteLine(" \n \n Qué acción desea realizar \n 1) Elegir azucar \n 2) Elegir Leche \n 3) Agrandar el pedido \n 4) Agregar datos del cliente \n 5) Finalizar pedido ");
+    do{
+Console.WriteLine(" \n \n Qué acción desea realizar \n 1) Elegir azucar \n 2) Elegir Leche \n 3) Agrandar el pedido \n 4) Agregar datos del cliente \n 5) confirmar pedido \n 6) cancelar pedido ");
 int.TryParse(Console.ReadLine(), out opcion);
 switch(opcion){
 case 1:
@@ -93,20 +94,36 @@ Console.WriteLine("CF");
 Console.WriteLine(objcliente.MostrarNit());
 break;
 case 5:
-precio = objlicuado.MostrarPrecio();
-Console.WriteLine("\n \n Te gustaria confirmar el pedido? 1) si  2) no");
+objlicuado.definirCant(cantidadLicuados);
+
+Console.WriteLine("\n \n 1) confirmar pedido   2) pedir otro licuado");
 int.TryParse(Console.ReadLine(), out respdow);
 if(respdow==1){
-precio = objlicuado.MostrarPrecio();
+
 DateTime fecha2 = DateTime.Now;
-Console.WriteLine(" \n \n | Fecha de inicio: "+fecha1+" \n | Fecha de finalización del pedido: "+fecha2+"\n | Nombre del cliente: "+objcliente.MostrarNombre()+".\n | NIT: "+ objcliente.MostrarNit()+"\n | Pedido: Licuado de fresa con "+ objlicuado.MostrarLeche()+"\n | Agregó "+objlicuado.MostrarcantAzucar()+" cucharaditas de "+objlicuado.MostrarAzucar()+" \n"+objlicuado.MostrarAgrandado()+"\n | El precio total es de Q."+precio);
+    if(objlicuado.MostrarCant()==1){
+Console.WriteLine("\n \n  --------------------------------------------------------------");
+Console.WriteLine(" | Fecha de inicio: "+fecha1+" \n | Fecha de finalización del pedido: "+fecha2+"\n | Nombre del cliente: "+objcliente.MostrarNombre()+".\n | NIT: "+ objcliente.MostrarNit()+"\n | Pedido: "+objlicuado.MostrarCant()+" Licuado(s) de fresa con "+ objlicuado.MostrarLeche()+"\n | Agregó "+objlicuado.MostrarcantAzucar()+" cucharaditas de "+objlicuado.MostrarAzucar()+" \n"+objlicuado.MostrarAgrandado()+"\n | El precio total es de Q."+ objlicuado.MostrarPrecio());
+Console.WriteLine("  --------------------------------------------------------------");
+}else{
+        precio = precio + objlicuado.MostrarPrecio();
+Console.WriteLine("\n \n  --------------------------------------------------------------");
+Console.WriteLine(" | Fecha de inicio: "+fecha1+" \n | Fecha de finalización del pedido: "+fecha2+"\n | Nombre del cliente: "+objcliente.MostrarNombre()+".\n | NIT: "+ objcliente.MostrarNit()+"\n | Pedido: "+objlicuado.MostrarCant()+" Licuado(s) de fresa  \n | El precio total es de Q."+ precio);
+Console.WriteLine("  --------------------------------------------------------------");
+
+}}
+if(respdow==2){
+    precio = objlicuado.MostrarPrecio();
+    Console.WriteLine("Agrega otro licuado ");
+    cantidadLicuados++;
 }
+
 break;
 
 
 }
-}while(respdow!=1);
-
+}while(respdow==2);
+}while(opcion==1 || opcion==2 || opcion==3 ||opcion==4);
 
 }
 }
